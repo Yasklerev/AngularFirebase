@@ -8,6 +8,12 @@ import { LoadComponent } from './load/load.component';
 // Material Angular
 import { AngularMaterialModule } from '../angular.material.module';
 
+// Firebase
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -17,9 +23,12 @@ import { AngularMaterialModule } from '../angular.material.module';
   ],
   imports: [
     CommonModule,
+    AngularFireModule.initializeApp(environment.firebase),
 
     // Material Angular
     AngularMaterialModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule,
   ],
   exports: [HeaderComponent, FooterComponent],
 })

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularphotos-273b0": {
+      "hosting": {
+        "PhotosApp": [
+          "angularphotos-273b0"
+        ]
+      }
+    }
+  }
+}
