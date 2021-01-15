@@ -5,13 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyCIiQXQIzstyP9jErFz30Q5ibUn4P-i-UE',
-    authDomain: 'angularphotos-273b0.firebaseapp.com',
-    projectId: 'angularphotos-273b0',
-    storageBucket: 'angularphotos-273b0.appspot.com',
-    messagingSenderId: '817420773660',
-    appId: '1:817420773660:web:1f42c713a7d4f4e389f2d9',
-    measurementId: 'G-Y9VJN11LRB',
+
   },
 };
 

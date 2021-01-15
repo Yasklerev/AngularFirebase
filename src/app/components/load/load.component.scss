@@ -1,0 +1,37 @@
+.main-container {
+  margin-top: 40px;
+}
+
+/* Drop Zone */
+.drop-zone {
+  border: dotted 3px lightgray;
+  opacity: 0.5;
+  color: #666;
+  text-align: center;
+}
+
+.file-over {
+  border: dotted 3px dodgerblue;
+}
+
+.table {
+  margin-top: 30px;
+}
+
+.text-green {
+  color: green;
+}
+
+.content-right {
+  margin-left: 30px;
+}
+
+button.mat-raised-button {
+    margin: 5px;
+    margin-top: 0px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}

@@ -1,1 +1,53 @@
-<p>load works!</p>
+<div class="row">
+  <div class="col-xs-4 start-xs">
+    <div class="box">
+      <mat-card>
+        <mat-card-title> Seleccione archivos </mat-card-title>
+        <mat-card-content>
+          <h4>Deje caer aquí los archivos</h4>
+          <div class="well drop-zone file-over">
+            <img src="assets/img/drop-images.png" alt="" />
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="col-xs-8 start-xs">
+    <div class="box content-right">
+      <mat-card>
+        <button
+          (click)="loadImages()"
+          [disabled]="archives.length === 0"
+          mat-raised-button
+          color="primary"
+        >
+          Cargar a Firebase
+        </button>
+        <button mat-raised-button color="warn">Limpiar</button>
+        <mat-card-content>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre del archivo</th>
+                <th>Tamaño</th>
+                <th>progreso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>XYZ</td>
+                <td>12 MB</td>
+                <td>
+                  <mat-progress-bar
+                    mode="determinate"
+                    value="40"
+                  ></mat-progress-bar>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
