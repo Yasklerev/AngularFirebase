@@ -13,6 +13,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { NgDropFilesDirective } from '../directives/ng-drop-files.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     FooterComponent,
     PhotosComponent,
     LoadComponent,
+    NgDropFilesDirective,
   ],
   imports: [
     CommonModule,

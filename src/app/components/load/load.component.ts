@@ -8,13 +8,21 @@ import { LoadImgService } from 'src/app/services/load-img.service';
   styleUrls: ['./load.component.scss'],
 })
 export class LoadComponent implements OnInit {
+  isOnTheElement = false;
   archives: FileItem[] = [];
 
   constructor(public loadImgService: LoadImgService) {}
 
   ngOnInit(): void {}
 
-  loadImages() {
+  loadImages(): void {
     this.loadImgService.loadImgFirebase(this.archives);
+  }
+
+  prueba(event): void {
+    console.log(event);
+  }
+  clearFiles(): void {
+    this.archives = [];
   }
 }
