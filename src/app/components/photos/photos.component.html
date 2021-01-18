@@ -1,5 +1,15 @@
-<ul>
-    <li *ngFor="let item of item$ | async">
-      {{ item.name }}
-    </li>
-  </ul>
+<div class="row center-xs">
+  <div *ngFor="let item of items | async" class="col-xs-3">
+    <div class="box">
+      <mat-card>
+        <mat-card-title>
+          {{ item.name }}
+        </mat-card-title>
+        <img class="img" [src]="item.url" alt="" />
+        <mat-card-content> </mat-card-content>
+        <mat-card-actions> </mat-card-actions>
+      </mat-card>
+      
+    </div>
+  </div>
+</div>

@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import {
+  AngularFirestore,
+  AngularFirestoreCollection,
+} from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+
+export interface Item {
+  name: string;
+  url: string;
+}
 
 @Component({
   selector: 'app-photos',
@@ -8,9 +16,12 @@ import { Observable } from 'rxjs';
   styleUrls: ['./photos.component.scss'],
 })
 export class PhotosComponent implements OnInit {
-  item$: Observable<any[]>;
-  constructor(firestore: AngularFirestore) {
-    this.item$ = firestore.collection('items').valueChanges();
+  private itemsCollection: AngularFirestoreCollection<Item>;
+  items: Observable<Item[]>;
+
+  constructor(angularFirestore: AngularFirestore) {
+    this.itemsCollection = angularFirestore.collection<Item>('img');
+    this.items = this.itemsCollection.valueChanges();
   }
 
   ngOnInit(): void {}

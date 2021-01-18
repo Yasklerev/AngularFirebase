@@ -29,7 +29,9 @@
         >
           Cargar a Firebase
         </button>
-        <button (click)="clearFiles()" mat-raised-button color="warn">Limpiar</button>
+        <button (click)="clearFiles()" mat-raised-button color="warn">
+          Limpiar
+        </button>
         <mat-card-content>
           <table>
             <thead>
@@ -41,14 +43,17 @@
             </thead>
             <tbody>
               <tr *ngFor="let item of archives">
-                <td>{{ item.nameArchive }}</td>
+                <td [ngClass]="{ 'text-green': item.progress >= 100 }">
+                  {{ item.nameArchive }}
+                </td>
                 <td>
                   {{ item.archive.size / 1024 / 1024 | number: ".2-2" }} MB
                 </td>
                 <td>
                   <mat-progress-bar
                     mode="determinate"
-                    [ngStyle]="{ value: item.progress + '%' }"
+                    value="100"
+                    [ngStyle]="{ width: item.progress + '%' }"
                   ></mat-progress-bar>
                 </td>
               </tr>
